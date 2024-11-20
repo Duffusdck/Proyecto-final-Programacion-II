@@ -24,7 +24,7 @@ public class RecetasInvitado extends JFrame {
 	public RecetasInvitado() {
 		setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 578, 457);
+		setBounds(100, 100, 650, 570);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(204, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

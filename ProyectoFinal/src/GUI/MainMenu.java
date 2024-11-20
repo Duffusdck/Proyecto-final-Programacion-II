@@ -32,7 +32,7 @@ public class MainMenu {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setUndecorated(true);
-		frame.setBounds(100, 100, 650, 352);
+		frame.setBounds(100, 100, 650, 570);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
@@ -127,6 +127,10 @@ public class MainMenu {
 		panel.setLayout(null);
 		
 		JButton btnNewButton_2 = new JButton("Iniciar Sesión");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton_2.setFont(new Font("Lato", Font.PLAIN, 10));
 		btnNewButton_2.setBounds(533, 11, 107, 23);
 		panel.add(btnNewButton_2);
