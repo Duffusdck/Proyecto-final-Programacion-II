@@ -99,15 +99,6 @@ public class NewMenu extends JFrame {
 		lblNewLabel.setBounds(0, 0, 655, 565);
 		tabhome.add(lblNewLabel);
 
-		JPanel tabrec = new JPanel();
-		tabrec.setBackground(new Color(255, 255, 255));
-		tabstest.addTab("", null, tabrec, null);
-		tabrec.setLayout(null);
-
-		JLabel label = new JLabel("New label");
-		label.setBounds(290, 241, 46, 14);
-		tabrec.add(label);
-
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(0, 160, 150, 440);
 		panel.add(panel_1);

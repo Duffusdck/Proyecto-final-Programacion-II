@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
+import java.awt.Color;
 
 public class regses extends JFrame {
 
@@ -27,6 +28,7 @@ public class regses extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 399, 253);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 128));
 		contentPane.setBorder(new EmptyBorder(0, 0, 0, 0));
 
 		setContentPane(contentPane);
@@ -44,7 +46,7 @@ public class regses extends JFrame {
 		
 		JLabel lblusr = new JLabel("Usuario:");
 		lblusr.setFont(new Font("Lato", Font.PLAIN, 12));
-		lblusr.setBounds(20, 104, 50, 15);
+		lblusr.setBounds(40, 104, 50, 15);
 		contentPane.add(lblusr);
 		
 		JLabel lblpss = new JLabel("Contraseña:");
@@ -53,12 +55,12 @@ public class regses extends JFrame {
 		contentPane.add(lblpss);
 		
 		textField = new JTextField();
-		textField.setBounds(87, 102, 86, 20);
+		textField.setBounds(100, 103, 86, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(87, 128, 86, 20);
+		passwordField.setBounds(100, 129, 86, 20);
 		contentPane.add(passwordField);
 		
 		JButton btninses = new JButton("Iniciar Sesión");
