@@ -127,10 +127,6 @@ public class MainMenu {
 		panel.setLayout(null);
 		
 		JButton btnNewButton_2 = new JButton("Iniciar Sesión");
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		btnNewButton_2.setFont(new Font("Lato", Font.PLAIN, 10));
 		btnNewButton_2.setBounds(533, 11, 107, 23);
 		panel.add(btnNewButton_2);

@@ -15,6 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
+import javax.swing.JToggleButton;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
@@ -37,7 +38,7 @@ public class NewMenu extends JFrame {
 		setLocationByPlatform(true);
 		setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 796, 600);
+		setBounds(100, 100, 851, 600);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -46,7 +47,7 @@ public class NewMenu extends JFrame {
 
 		JPanel panel = new JPanel();
 		panel.setBackground(new Color(255, 255, 255));
-		panel.setBounds(0, 0, 800, 600);
+		panel.setBounds(0, 0, 841, 600);
 		contentPane.add(panel);
 		panel.setLayout(null);
 
@@ -84,20 +85,69 @@ public class NewMenu extends JFrame {
 		tabstest.addTab("", null, tabhome, null);
 		tabhome.setLayout(null);
 
-		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setVerticalAlignment(SwingConstants.TOP);
-		lblNewLabel_2.setBounds(10, 96, 309, 356);
-		tabhome.add(lblNewLabel_2);
+		JButton btnNewButton_2 = new JButton("Receta: Postre");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				tabstest.setSelectedIndex(4);
+			}
+		});
+		btnNewButton_2.setBorder(null);
+		btnNewButton_2.setBackground(new Color(255, 255, 255));
+		btnNewButton_2.setBounds(10, 439, 310, 115);
+		tabhome.add(btnNewButton_2);
+
+		JButton btnNewButton_1 = new JButton("Receta: Plato Fuerte");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				tabstest.setSelectedIndex(3);
+			}
+		});
+		btnNewButton_1.setBackground(new Color(255, 255, 255));
+		btnNewButton_1.setBorder(null);
+		btnNewButton_1.setBounds(10, 299, 310, 115);
+		tabhome.add(btnNewButton_1);
+
+		JButton btnNewButton = new JButton("Receta: Entrada");
+		btnNewButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+
+				tabstest.setSelectedIndex(2);
+
+			}
+		});
+		btnNewButton.setBackground(new Color(255, 255, 255));
+		btnNewButton.setBorder(null);
+		btnNewButton.setBounds(10, 153, 310, 115);
+		tabhome.add(btnNewButton);
 
 		JLabel lblNewLabel_1 = new JLabel("BIENVENID@");
-		lblNewLabel_1.setFont(new Font("Lato Thin", Font.PLAIN, 50));
-		lblNewLabel_1.setBounds(10, 11, 463, 74);
+		lblNewLabel_1.setFont(new Font("Lato Light", Font.PLAIN, 50));
+		lblNewLabel_1.setBounds(10, 11, 309, 74);
 		tabhome.add(lblNewLabel_1);
 
-		JLabel lblNewLabel = new JLabel("New label");
+		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(NewMenu.class.getResource("/IMGS/homeback.jpg")));
 		lblNewLabel.setBounds(0, 0, 655, 565);
 		tabhome.add(lblNewLabel);
+
+		JPanel tabrec = new JPanel();
+		tabrec.setBackground(new Color(255, 255, 255));
+		tabstest.addTab("", null, tabrec, null);
+		tabrec.setLayout(null);
+
+		JLabel label = new JLabel("");
+		label.setBounds(290, 241, 46, 14);
+		tabrec.add(label);
+
+		JPanel panel_entradas = new JPanel();
+		tabstest.addTab("", null, panel_entradas, null);
+
+		JPanel panel_fuerte = new JPanel();
+		tabstest.addTab("", null, panel_fuerte, null);
+
+		JPanel panel_postres = new JPanel();
+		tabstest.addTab("", null, panel_postres, null);
 
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(0, 160, 150, 440);
@@ -105,10 +155,14 @@ public class NewMenu extends JFrame {
 		panel_1.setLayout(null);
 
 		JButton btnppal = new JButton("Home");
+		btnppal.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnppal.setFocusable(false);
 		btnppal.setForeground(new Color(255, 255, 255));
-		btnppal.setFont(new Font("Lato Heavy", Font.PLAIN, 14));
-		btnppal.setIcon(new ImageIcon(NewMenu.class.getResource("/IMGS/home.png")));
+		btnppal.setFont(new Font("Lato Black", Font.PLAIN, 20));
+		btnppal.setIcon(new ImageIcon(NewMenu.class.getResource("/IMGS/Home.png")));
 		btnppal.addMouseListener(new MouseAdapter() {
 
 			@Override
@@ -120,6 +174,7 @@ public class NewMenu extends JFrame {
 			public void mouseExited(MouseEvent e) {
 				btnppal.setBackground(new Color(0, 128, 192));
 			}
+
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				tabstest.setSelectedIndex(0);
@@ -133,6 +188,7 @@ public class NewMenu extends JFrame {
 		btnppal.setBorder(null);
 
 		JButton btninv = new JButton("Recetas");
+		btninv.setIcon(new ImageIcon(NewMenu.class.getResource("/IMGS/Recipes.png")));
 		btninv.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -150,6 +206,7 @@ public class NewMenu extends JFrame {
 			public void mouseExited(MouseEvent e) {
 				btninv.setBackground(new Color(0, 128, 192));
 			}
+
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				tabstest.setSelectedIndex(1);
@@ -159,9 +216,36 @@ public class NewMenu extends JFrame {
 		btninv.setBorder(null);
 		btninv.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btninv.setForeground(new Color(255, 255, 255));
-		btninv.setFont(new Font("Lato Heavy", Font.PLAIN, 14));
+		btninv.setFont(new Font("Lato Black", Font.PLAIN, 20));
 		btninv.setBounds(0, 69, 150, 69);
 		panel_1.add(btninv);
+
+		JButton btnlogin = new JButton("Ingresar");
+		btnlogin.setForeground(new Color(255, 255, 255));
+		btnlogin.setFont(new Font("Lato Black", Font.PLAIN, 20));
+		btnlogin.setIcon(new ImageIcon(NewMenu.class.getResource("/IMGS/Login.png")));
+		btnlogin.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				regses reg = new regses();
+				reg.setVisible(true);
+				dispose();
+			}
+		});
+		btnlogin.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				btnlogin.setBackground(new Color(0, 128, 255));
+			}
+
+			@Override
+			public void mouseExited(MouseEvent e) {
+				btnlogin.setBackground(new Color(0, 128, 192));
+			}
+		});
+		btnlogin.setBackground(new Color(0, 128, 192));
+		btnlogin.setBorder(null);
+		btnlogin.setBounds(0, 138, 150, 69);
+		panel_1.add(btnlogin);
 
 		JLabel lbllogo = new JLabel("");
 		lbllogo.setIcon(new ImageIcon(NewMenu.class.getResource("/IMGS/Logo.png")));
