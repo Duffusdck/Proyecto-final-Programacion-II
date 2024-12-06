@@ -46,13 +46,13 @@ public class NewMenu extends JFrame {
 		contentPane.setLayout(null);
 
 		JPanel panel = new JPanel();
-		panel.setBackground(new Color(255, 255, 255));
+		panel.setBackground(new Color(174, 206, 255));
 		panel.setBounds(0, 0, 841, 600);
 		contentPane.add(panel);
 		panel.setLayout(null);
 
 		JLabel lblfecha = new JLabel();
-		lblfecha.setBackground(new Color(255, 255, 255));
+		lblfecha.setBackground(new Color(174, 154, 228));
 		lblfecha.addMouseMotionListener(new MouseMotionAdapter() {
 			@Override
 			public void mouseDragged(MouseEvent e) {
@@ -68,7 +68,7 @@ public class NewMenu extends JFrame {
 				yMouse = e.getY();
 			}
 		});
-		lblfecha.setFont(new Font("Lato Thin", Font.PLAIN, 14));
+		lblfecha.setFont(new Font("Lato Thin", Font.PLAIN, 15));
 		lblfecha.setText(date.fecha);
 		lblfecha.setHorizontalAlignment(SwingConstants.CENTER);
 		lblfecha.setBounds(28, 0, 772, 25);
@@ -87,6 +87,7 @@ public class NewMenu extends JFrame {
 
 		JButton btnpostre = new JButton(
 				"<html><center><b>Postre: </b><br>Pie de limon con galleta de chocolate</center></html>");
+		btnpostre.setForeground(new Color(255, 255, 255));
 		btnpostre.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
@@ -99,28 +100,30 @@ public class NewMenu extends JFrame {
 			}
 		});
 		btnpostre.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnpostre.setFont(new Font("Lato Light", Font.PLAIN, 20));
+		btnpostre.setFont(new Font("Lato Light", Font.PLAIN, 22));
 		btnpostre.setIcon(new ImageIcon(NewMenu.class.getResource("/IMGS/btnPostre.png")));
 		btnpostre.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				tabstest.setSelectedIndex(4);
 			}
 		});
-		
-		JLabel lblmsg = new JLabel("<html><b>¡Bienvenid@!</b><br>En esta app podrás ver y añadir tus recetas favoritas!<br>En la parte de abajo, encontrarás 3 recetas de muestra. <br>Para ver y/o añadir recetas nuevas debes registrarte</html>");
+
+		JLabel lblmsg = new JLabel(
+				"<html><b>¡Bienvenid@!</b><br>En esta app podrás ver y añadir tus recetas favoritas!<br>En la parte de abajo, encontrarás 3 recetas de muestra. <br>Para ver y/o añadir recetas nuevas debes registrarte</html>");
 		lblmsg.setFont(new Font("Lato", Font.PLAIN, 14));
 		lblmsg.setBounds(10, 75, 349, 74);
 		tabhome.add(lblmsg);
 		btnpostre.setBorder(null);
-		btnpostre.setBackground(new Color(255, 255, 255));
+		btnpostre.setBackground(new Color(165, 134, 227));
 		btnpostre.setBounds(10, 439, 310, 115);
 		tabhome.add(btnpostre);
 
 		JButton btnfuerte = new JButton(
 				"<html><center><b>Plato Fuerte: </b><br>Lasagna con carne molida al horno</center></html>");
+		btnfuerte.setForeground(new Color(255, 255, 255));
 		btnfuerte.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnfuerte.setIcon(new ImageIcon(NewMenu.class.getResource("/IMGS/btnFuerte.png")));
-		btnfuerte.setFont(new Font("Lato Light", Font.PLAIN, 20));
+		btnfuerte.setFont(new Font("Lato Light", Font.PLAIN, 22));
 		btnfuerte.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
@@ -138,14 +141,15 @@ public class NewMenu extends JFrame {
 				tabstest.setSelectedIndex(3);
 			}
 		});
-		btnfuerte.setBackground(new Color(255, 255, 255));
+		btnfuerte.setBackground(new Color(165, 134, 227));
 		btnfuerte.setBorder(null);
 		btnfuerte.setBounds(10, 299, 310, 115);
 		tabhome.add(btnfuerte);
 
 		JButton btnentrada = new JButton("<html><center><b>Entrada: </b><br>Fusilli en salsa blanca</center></html>");
+		btnentrada.setForeground(new Color(255, 255, 255));
 		btnentrada.setIcon(new ImageIcon(NewMenu.class.getResource("/IMGS/btnEntrada.png")));
-		btnentrada.setFont(new Font("Lato Light", Font.PLAIN, 20));
+		btnentrada.setFont(new Font("Lato Light", Font.PLAIN, 22));
 		btnentrada.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
@@ -163,7 +167,7 @@ public class NewMenu extends JFrame {
 				tabstest.setSelectedIndex(2);
 			}
 		});
-		btnentrada.setBackground(new Color(255, 255, 255));
+		btnentrada.setBackground(new Color(165, 134, 227));
 		btnentrada.setBorder(null);
 		btnentrada.setBounds(10, 153, 310, 115);
 		tabhome.add(btnentrada);
@@ -188,10 +192,10 @@ public class NewMenu extends JFrame {
 		tabrec.add(label);
 
 		JPanel panel_entradas = new JPanel();
-		panel_entradas.setBackground(new Color(255, 255, 191));
+		panel_entradas.setBackground(new Color(174, 154, 228));
 		tabstest.addTab("", null, panel_entradas, null);
 		panel_entradas.setLayout(null);
-		
+
 		JLabel lblRecipeName = new JLabel("Fusilli en salsa blanca");
 		lblRecipeName.setForeground(new Color(64, 0, 64));
 		lblRecipeName.setFont(new Font("Lato Semibold", Font.PLAIN, 25));
@@ -224,7 +228,7 @@ public class NewMenu extends JFrame {
 
 		JCheckBox chckbxmant = new JCheckBox("60gr de Mantequilla");
 		chckbxmant.setFont(new Font("Lato", Font.PLAIN, 11));
-		chckbxmant.setBackground(new Color(255, 255, 191));
+		chckbxmant.setBackground(new Color(174, 154, 228));
 		chckbxmant.setBounds(10, 168, 162, 23);
 		panel_entradas.add(chckbxmant);
 
@@ -235,94 +239,79 @@ public class NewMenu extends JFrame {
 
 		JCheckBox chckbxharina = new JCheckBox("60gr de Harina trigo ");
 		chckbxharina.setFont(new Font("Lato", Font.PLAIN, 11));
-		chckbxharina.setBackground(new Color(255, 255, 191));
+		chckbxharina.setBackground(new Color(174, 154, 228));
 		chckbxharina.setBounds(10, 194, 162, 23);
 		panel_entradas.add(chckbxharina);
 
 		JCheckBox chckbxLecheEvapo = new JCheckBox("Crema de Leche");
 		chckbxLecheEvapo.setFont(new Font("Lato", Font.PLAIN, 11));
-		chckbxLecheEvapo.setBackground(new Color(255, 255, 191));
+		chckbxLecheEvapo.setBackground(new Color(174, 154, 228));
 		chckbxLecheEvapo.setBounds(10, 220, 162, 23);
 		panel_entradas.add(chckbxLecheEvapo);
 
 		JCheckBox chckbxagua = new JCheckBox("1 1/4 Tazas de agua");
 		chckbxagua.setFont(new Font("Lato", Font.PLAIN, 11));
-		chckbxagua.setBackground(new Color(255, 255, 191));
+		chckbxagua.setBackground(new Color(174, 154, 228));
 		chckbxagua.setBounds(174, 168, 162, 23);
 		panel_entradas.add(chckbxagua);
 
 		JCheckBox chckbxSal = new JCheckBox("1/2 Cucharada de sal");
 		chckbxSal.setFont(new Font("Lato", Font.PLAIN, 11));
-		chckbxSal.setBackground(new Color(255, 255, 191));
+		chckbxSal.setBackground(new Color(174, 154, 228));
 		chckbxSal.setBounds(174, 194, 162, 23);
 		panel_entradas.add(chckbxSal);
 
 		JCheckBox chckbxNuez = new JCheckBox("Nuez moscada molida");
 		chckbxNuez.setFont(new Font("Lato", Font.PLAIN, 11));
-		chckbxNuez.setBackground(new Color(255, 255, 191));
+		chckbxNuez.setBackground(new Color(174, 154, 228));
 		chckbxNuez.setBounds(174, 220, 162, 23);
 		panel_entradas.add(chckbxNuez);
 
-		JCheckBox chckbxMant = new JCheckBox("1 Cucharada de Mantequilla");
-		chckbxMant.setFont(new Font("Lato", Font.PLAIN, 11));
-		chckbxMant.setBackground(new Color(255, 255, 191));
-		chckbxMant.setBounds(345, 168, 162, 23);
-		panel_entradas.add(chckbxMant);
-
-		JCheckBox chckbxJamon = new JCheckBox("Jamon cortado en cubos");
-		chckbxJamon.setFont(new Font("Lato", Font.PLAIN, 11));
-		chckbxJamon.setBackground(new Color(255, 255, 191));
-		chckbxJamon.setBounds(345, 194, 162, 23);
-		panel_entradas.add(chckbxJamon);
-
-		JCheckBox chckbxFusilli = new JCheckBox("200gr Pasta Fusilli");
-		chckbxFusilli.setFont(new Font("Lato", Font.PLAIN, 11));
-		chckbxFusilli.setBackground(new Color(255, 255, 191));
-		chckbxFusilli.setBounds(345, 220, 162, 23);
-		panel_entradas.add(chckbxFusilli);
-		
 		JLabel lblTitulo = new JLabel("¡A COCINAR!");
 		lblTitulo.setFont(new Font("Lato Black", Font.PLAIN, 35));
 		lblTitulo.setBounds(10, 250, 224, 43);
 		panel_entradas.add(lblTitulo);
-		
-		JLabel lblNewLabel_8 = new JLabel("<html>Para hacer la salsa <b>Bechamel</b> derrite la mantequilla en una olla, agrega la harina y revuelve constantemente durante tres minutos, agrega constantemente la crema de leche y un poco de agua para evitar grumos.</html>");
+
+		JLabel lblNewLabel_8 = new JLabel(
+				"<html>Para hacer la salsa <b>Bechamel</b> derrite la mantequilla en una olla, agrega la harina y revuelve constantemente durante tres minutos, agrega constantemente la crema de leche y un poco de agua para evitar grumos.</html>");
 		lblNewLabel_8.setFont(new Font("Lato", Font.PLAIN, 15));
 		lblNewLabel_8.setBounds(67, 297, 401, 88);
 		panel_entradas.add(lblNewLabel_8);
-		
+
 		JLabel lblNewLabel_9 = new JLabel("1.");
 		lblNewLabel_9.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_9.setFont(new Font("Lato Black", Font.PLAIN, 45));
 		lblNewLabel_9.setBounds(20, 313, 37, 55);
 		panel_entradas.add(lblNewLabel_9);
-		
+
 		JLabel lblNewLabel_10 = new JLabel("2.");
 		lblNewLabel_10.setFont(new Font("Lato Black", Font.PLAIN, 45));
 		lblNewLabel_10.setBounds(596, 396, 37, 55);
 		panel_entradas.add(lblNewLabel_10);
-		
-		JLabel lblNewLabel_11 = new JLabel("<html>Añade la sal y la nuez moscada, revolviendo constantemente para evitar que se pegue; cocina hasta que espese ligeramente.</html>");
+
+		JLabel lblNewLabel_11 = new JLabel(
+				"<html>Añade la sal y la nuez moscada, revolviendo constantemente para evitar que se pegue; cocina hasta que espese ligeramente.</html>");
 		lblNewLabel_11.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblNewLabel_11.setFont(new Font("Lato", Font.PLAIN, 15));
 		lblNewLabel_11.setBounds(185, 395, 401, 74);
 		panel_entradas.add(lblNewLabel_11);
-		
+
 		JLabel lblNewLabel_12 = new JLabel("3.");
 		lblNewLabel_12.setFont(new Font("Lato Black", Font.PLAIN, 45));
 		lblNewLabel_12.setBounds(20, 494, 37, 55);
 		panel_entradas.add(lblNewLabel_12);
-		
-		JLabel lblNewLabel_13 = new JLabel("<html>Calienta la mantequilla y dora ligeramente el jamón. Añade la pasta previamente cocida y escurrida, la salsa bechamel y mezcla suavemente. Cocina por 2 minutos a fuego medio y <b>¡Disfruta!</b></html>");
+
+		JLabel lblNewLabel_13 = new JLabel(
+				"<html>Calienta la mantequilla y dora ligeramente el jamón. Añade la pasta previamente cocida y escurrida, la salsa bechamel y mezcla suavemente. Cocina por 2 minutos a fuego medio y <b>¡Disfruta!</b></html>");
 		lblNewLabel_13.setFont(new Font("Lato", Font.PLAIN, 15));
 		lblNewLabel_13.setBounds(67, 480, 401, 74);
 		panel_entradas.add(lblNewLabel_13);
 
 		JPanel panel_fuerte = new JPanel();
-		panel_fuerte.setBackground(new Color(255, 255, 191));
+		panel_fuerte.setBackground(new Color(174, 154, 228));
 		tabstest.addTab("", null, panel_fuerte, null);
 		panel_fuerte.setLayout(null);
-		
+
 		JLabel lblfuertename = new JLabel("Fusilli en salsa blanca");
 		lblfuertename.setForeground(new Color(64, 0, 64));
 		lblfuertename.setFont(new Font("Lato Semibold", Font.PLAIN, 25));
@@ -396,73 +385,73 @@ public class NewMenu extends JFrame {
 
 		JCheckBox chckbx7 = new JCheckBox("1 Cucharada de Mantequilla");
 		chckbx7.setFont(new Font("Lato", Font.PLAIN, 11));
-		chckbx7.setBackground(new Color(255, 255, 191));
-		chckbx7.setBounds(345, 168, 162, 23);
+		chckbx7.setBackground(new Color(174, 154, 228));
+		chckbx7.setBounds(338, 168, 162, 23);
 		panel_entradas.add(chckbx7);
 
 		JCheckBox chckbx8 = new JCheckBox("Jamon cortado en cubos");
 		chckbx8.setFont(new Font("Lato", Font.PLAIN, 11));
-		chckbx8.setBackground(new Color(255, 255, 191));
-		chckbx8.setBounds(345, 194, 162, 23);
+		chckbx8.setBackground(new Color(174, 154, 228));
+		chckbx8.setBounds(338, 194, 162, 23);
 		panel_entradas.add(chckbx8);
 
 		JCheckBox chckbx9 = new JCheckBox("200gr Pasta Fusilli");
 		chckbx9.setFont(new Font("Lato", Font.PLAIN, 11));
-		chckbx9.setBackground(new Color(255, 255, 191));
-		chckbx9.setBounds(345, 220, 162, 23);
+		chckbx9.setBackground(new Color(174, 154, 228));
+		chckbx9.setBounds(338, 220, 162, 23);
 		panel_entradas.add(chckbx9);
-		
+
 		JLabel lblacocinar = new JLabel("¡A COCINAR!");
 		lblacocinar.setFont(new Font("Lato Black", Font.PLAIN, 35));
 		lblacocinar.setBounds(10, 250, 224, 43);
 		panel_entradas.add(lblacocinar);
-		
-		JLabel lblinst1 = new JLabel("<html>Para hacer la salsa <b>Bechamel</b> derrite la mantequilla en una olla, agrega la harina y revuelve constantemente durante tres minutos, agrega constantemente la crema de leche y un poco de agua para evitar grumos.</html>");
+
+		JLabel lblinst1 = new JLabel(
+				"<html>Para hacer la salsa <b>Bechamel</b> derrite la mantequilla en una olla, agrega la harina y revuelve constantemente durante tres minutos, agrega constantemente la crema de leche y un poco de agua para evitar grumos.</html>");
 		lblinst1.setFont(new Font("Lato", Font.PLAIN, 15));
 		lblinst1.setBounds(67, 297, 401, 88);
 		panel_entradas.add(lblinst1);
-		
+
 		JLabel lbln1 = new JLabel("1.");
 		lbln1.setHorizontalAlignment(SwingConstants.CENTER);
 		lbln1.setFont(new Font("Lato Black", Font.PLAIN, 45));
 		lbln1.setBounds(20, 313, 37, 55);
 		panel_entradas.add(lbln1);
-		
+
 		JLabel lbln2 = new JLabel("2.");
 		lbln2.setFont(new Font("Lato Black", Font.PLAIN, 45));
 		lbln2.setBounds(596, 396, 37, 55);
 		panel_entradas.add(lbln2);
-		
-		JLabel lblinst2 = new JLabel("<html>Añade la sal y la nuez moscada, revolviendo constantemente para evitar que se pegue; cocina hasta que espese ligeramente.</html>");
+
+		JLabel lblinst2 = new JLabel(
+				"<html>Añade la sal y la nuez moscada, revolviendo constantemente para evitar que se pegue; cocina hasta que espese ligeramente.</html>");
 		lblinst2.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblinst2.setFont(new Font("Lato", Font.PLAIN, 15));
 		lblinst2.setBounds(185, 395, 401, 74);
 		panel_entradas.add(lblinst2);
-		
+
 		JLabel lbln3 = new JLabel("3.");
 		lbln3.setFont(new Font("Lato Black", Font.PLAIN, 45));
 		lbln3.setBounds(20, 494, 37, 55);
 		panel_entradas.add(lbln3);
-		
-		JLabel lblinst3 = new JLabel("<html>Calienta la mantequilla y dora ligeramente el jamón. Añade la pasta previamente cocida y escurrida, la salsa bechamel y mezcla suavemente. Cocina por 2 minutos a fuego medio y <b>¡Disfruta!</b></html>");
+
+		JLabel lblinst3 = new JLabel(
+				"<html>Calienta la mantequilla y dora ligeramente el jamón. Añade la pasta previamente cocida y escurrida, la salsa bechamel y mezcla suavemente. Cocina por 2 minutos a fuego medio y <b>¡Disfruta!</b></html>");
 		lblinst3.setFont(new Font("Lato", Font.PLAIN, 15));
 		lblinst3.setBounds(67, 480, 401, 74);
 		panel_entradas.add(lblinst3);
 
-		
 		JPanel panel_postres = new JPanel();
+		panel_postres.setBackground(new Color(174, 154, 228));
 		tabstest.addTab("", null, panel_postres, null);
 
 		JPanel panelbotones = new JPanel();
+		panelbotones.setBackground(new Color(174, 206, 255));
 		panelbotones.setBounds(0, 191, 150, 409);
 		panel.add(panelbotones);
 		panelbotones.setLayout(null);
 
 		JButton btnppal = new JButton("Home");
-		btnppal.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
 		btnppal.setFocusable(false);
 		btnppal.setForeground(new Color(255, 255, 255));
 		btnppal.setFont(new Font("Lato Black", Font.PLAIN, 20));
@@ -471,20 +460,21 @@ public class NewMenu extends JFrame {
 
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				btnppal.setBackground(new Color(0, 128, 255));
+				btnppal.setBackground(new Color(174, 154, 228));
 			}
 
 			@Override
 			public void mouseExited(MouseEvent e) {
-				btnppal.setBackground(new Color(0, 128, 192));
+				btnppal.setBackground(new Color(165, 134, 227));
 			}
 
 			@Override
 			public void mouseClicked(MouseEvent e) {
+				btnppal.setBackground(new Color(165, 134, 227));
 				tabstest.setSelectedIndex(0);
 			}
 		});
-		btnppal.setBackground(new Color(0, 128, 192));
+		btnppal.setBackground(new Color(165, 134, 227));
 		btnppal.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 		btnppal.setBounds(0, 0, 150, 69);
 		panelbotones.add(btnppal);
@@ -493,22 +483,17 @@ public class NewMenu extends JFrame {
 
 		JButton btninv = new JButton("Recetas");
 		btninv.setIcon(new ImageIcon(NewMenu.class.getResource("/IMGS/Recipes.png")));
-		btninv.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-			}
-		});
 		btninv.setFocusable(false);
-		btninv.setBackground(new Color(0, 128, 192));
+		btninv.setBackground(new Color(165, 134, 227));
 		btninv.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				btninv.setBackground(new Color(0, 128, 255));
+				btninv.setBackground(new Color(174, 154, 228));
 			}
 
 			@Override
 			public void mouseExited(MouseEvent e) {
-				btninv.setBackground(new Color(0, 128, 192));
+				btninv.setBackground(new Color(165, 134, 227));
 			}
 
 			@Override
@@ -538,15 +523,15 @@ public class NewMenu extends JFrame {
 		btnlogin.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				btnlogin.setBackground(new Color(0, 128, 255));
+				btnlogin.setBackground(new Color(174, 154, 228));
 			}
 
 			@Override
 			public void mouseExited(MouseEvent e) {
-				btnlogin.setBackground(new Color(0, 128, 192));
+				btnlogin.setBackground(new Color(165, 134, 227));
 			}
 		});
-		btnlogin.setBackground(new Color(0, 128, 192));
+		btnlogin.setBackground(new Color(165, 134, 227));
 		btnlogin.setBorder(null);
 		btnlogin.setBounds(0, 138, 150, 69);
 		panelbotones.add(btnlogin);
@@ -567,12 +552,12 @@ public class NewMenu extends JFrame {
 
 			@Override
 			public void mouseExited(MouseEvent e) {
-				btnexit.setBackground(new Color(255, 255, 255));
+				btnexit.setBackground(new Color(174, 206, 255));
 				btnexit.setForeground(new Color(0, 0, 0));
 			}
 		});
 		btnexit.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-		btnexit.setBackground(new Color(255, 255, 255));
+		btnexit.setBackground(new Color(174, 206, 255));
 		btnexit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);

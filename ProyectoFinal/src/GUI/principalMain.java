@@ -4,7 +4,7 @@ public class principalMain {
 
 	public static void main(String[] args) {
 		
-		NewMenu frame = new NewMenu();
+		runApp frame = new runApp();
 		frame.setVisible(true);
 
 	}

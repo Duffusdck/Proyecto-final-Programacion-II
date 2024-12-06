@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 public class Conexion {
 	
-	//Creamos un m�todo constructor Privado dado que haremos uso de patron Singleton
+	//Creamos un metodo constructor Privado
 		private Conexion() {	
 		}
 		
@@ -20,7 +20,7 @@ public class Conexion {
 	private static Conexion instancia;
 
 	// Creamos las variables para poder conectarnos a la BD
-	private static final String URL = "jdbc:mysql://localhost:3306/bd_prueba";
+	private static final String URL = "jdbc:mysql://localhost:3306/rec";
 	private static final String USERNAME = "root";
 	private static final String PASSWORD = "";
 
@@ -29,7 +29,7 @@ public class Conexion {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conexion = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-			JOptionPane.showMessageDialog(null, "Conexi�n Exitosa!!");
+			//JOptionPane.showMessageDialog(null, "Conexi�n Exitosa!!");
 			return conexion;
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(null, "Error: "+e);
@@ -41,7 +41,7 @@ public class Conexion {
 	public void cerrarConexion() throws SQLException{
 		try {
 			conexion.close();
-			JOptionPane.showMessageDialog(null, "Se desconect� de la base de datos. ");
+			//JOptionPane.showMessageDialog(null, "Se desconect� de la base de datos. ");
 			
 		}catch (Exception e1){
 			JOptionPane.showMessageDialog(null, "Error: ");
